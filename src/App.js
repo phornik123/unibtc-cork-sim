@@ -794,46 +794,42 @@ function App() {
     );
   };
 
-  return (
-    <div
-      className="App"
-      style={{
-        "--primary-color": COLORS.primary,
-        "--secondary-color": COLORS.secondary,
-        "--tertiary-color": COLORS.tertiary,
-        "--accent-color": COLORS.accent,
-        "--highlight-color": COLORS.highlight,
-      }}
-    >
-      <header style={{ backgroundColor: COLORS.primary }}>
-        <div className="header-content">
-          <div className="logo-title-container">
-            <h1 style={{ color: "#ffffff" }}>
-              UniBTC & Cork Protocol Integration Dashboard
-            </h1>
-          </div>
-          <TabNavigation />
+  // Placeholder functions for other tabs
+  const renderScenario1Tab = () => {
+    return (
+      <div className="scenario1-tab">
+        <div className="filter-panel">
+          <h3>Scenario 1: Peg Stability Enforcement via Depeg Swaps (DS)</h3>
+          <p className="scenario-objective">
+            <strong>Objective:</strong> Model historical UniBTC peg deviations
+            (Nov–Dec 2024) and quantify savings had Cork's Depeg Swap (DS)
+            hedging mechanism been implemented.
+          </p>
         </div>
-      </header>
+        <div className="placeholder-chart">
+          <p>Scenario 1 content will be implemented here.</p>
+        </div>
+      </div>
+    );
+  };
 
-      <main>
-        {loading && activeTab === "scenario1" ? (
-          <div className="loading-container">
-            <div className="loading-spinner"></div>
-            <p>Loading Cork Protocol data...</p>
-          </div>
-        ) : (
-          <div className="dashboard">
-            {activeTab === "summary" && renderSummaryTab()}
-          </div>
-        )}
-      </main>
+  const renderScenario2Tab = () => {
+    return (
+      <div className="scenario2-tab">
+        <div className="filter-panel">
+          <h3>Scenario 2: Cross-Chain Liquidity Optimization</h3>
+          <p className="scenario-objective">
+            <strong>Objective:</strong> Quantify reduction of problematic
+            cross-chain mint/burn spikes during severe depeg events by
+            implementing Cork's DS mechanism across multiple chains.
+          </p>
+        </div>
+        <div className="placeholder-chart">
+          <p>Scenario 2 content will be implemented here.</p>
+        </div>
+      </div>
+    );
+  };
 
-      <footer style={{ backgroundColor: COLORS.primary, color: "#ffffff" }}>
-        <p>© 2025 Cork Protocol - Integration Analysis Tool</p>
-      </footer>
-    </div>
-  );
-}
-
-export default App;
+  const renderScenario3Tab = () => {
+    return (
