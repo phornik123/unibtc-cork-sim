@@ -90,4 +90,6 @@ dmypy.json
 
 # Project specific
 *.log
-*.json
+# Include package.json and other configuration files
+!package.json
+!public/manifest.json
